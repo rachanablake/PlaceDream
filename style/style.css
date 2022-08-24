@@ -234,14 +234,13 @@ body {
     transition: 0.25s;
 }
 /* About Us & Spec --------------------------------------------------------------------------------------- */
-.about-us{
+.about{
     display: flex;
-    padding: 70px 0 0 0;
+    justify-content: space-between;
 }
 .spec{
     display: flex;
     justify-content: space-between;
-    /* padding: 70px 0; */
 }
 .article{
     width: 50%;
