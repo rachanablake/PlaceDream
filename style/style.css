@@ -236,10 +236,12 @@ body {
 /* About Us & Spec --------------------------------------------------------------------------------------- */
 .about{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .spec{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .article{
