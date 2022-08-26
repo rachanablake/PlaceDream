@@ -6,10 +6,16 @@
 }
 
 :root{
-    --first: #1F5BD3;
-    --second: #F1ECE6;
+    
+    --first: #1D9BF0;
+    --second: #F0F2F5;
+    --third: #1D9BF0;
+    --fourth: #181818;
+
+    /* --first: #1D9BF0;
+    --second: #EFF3F4;
     --third: #0F4C75;
-    --fourth: #D98326;
+    --fourth: #D98326; */
 
     /* --first: #1F5BD3;
     --second: #EFEFEF;
@@ -19,6 +25,8 @@
 
 body {
     overflow-x: hidden;
+    transition: 0.5s;
+    background-color: #FFFFFF;
 }
 
 /* header------------------------------------------------------------------------------------- */
@@ -115,7 +123,7 @@ body {
 
 .header .button-main .button:hover{
     color: var(--second);
-    background-color: var(--first);
+    background-color: var(--fourth);
     transition: 0.25s;
 }
 
@@ -200,7 +208,7 @@ body {
 
 .body-content .catalog .img h3{
     padding: 2% 0;
-    color: var(--third);
+    /* color: var(--third); */
 } 
 
 .body-content .catalog .img img{
@@ -270,7 +278,7 @@ body {
     /* bottom: 40px; */
     /* padding: 0 15px; */
     display: block;
-    color: var(--third);
+    /* color: var(--third); */
 }
 
 .feature-content .feature-image .img img:hover{
@@ -318,23 +326,26 @@ body {
     width: 90%;
 }
 
-.button-main .button{
+.button1{
     border: none;
     padding: 15px;
     font-size: 15px;
     font-weight: Bold;
-    color: var(--third);
+    color: var(--first);
+    /* background-color: var(--second); */
+    /* box-shadow: 0px 0px 5px rgba(0,0,0,0.4); */
     cursor: pointer;
     transition: 0.25s;
 }
 
-.button-main .button:hover{
+.button1:hover{
     color: var(--second);
     background-color: var(--first);
     transition: 0.25s;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    box-shadow: none;
 }
 
+/* Comapny Detail------------------------------------------------------------------ */
 .company-detail{
     width: 70%;
     margin: auto;
@@ -369,6 +380,7 @@ body {
     width: 100%;
 }
 
+/* Company Contact-------------------------------------------------------------------- */
 .company-contact{
     width: 70%;
     margin: auto;
@@ -397,7 +409,7 @@ body {
 }
 .company-contact h3{
     padding: 10px 0;
-    color: var(--fourth);
+    color: var(--first);
 }
 
 /* footer-------------------------------------------------------------------------------------- */
@@ -450,22 +462,58 @@ footer .navigation .copy-right h4{
     padding: 0 0 0 5px;
 }
 
-::-webkit-scrollbar{
+/* scrollbar---------------------------------------------------------------------------------- */
+/* ::-webkit-scrollbar{
     width: 10px;
 }
 
 ::-webkit-scrollbar-track{
-    /* background: var(--second); */
+    background: var(--second);
     background: transparent;
-}
+} */
 
-::-webkit-scrollbar-thumb{
+/* ::-webkit-scrollbar-thumb{
     background: var(--first);
     border-radius: 5px;
+    scrollbar-width: none
 }
 
 ::-webkit-scrollbar-thumb:hover{
     background: var(--third);
     border-radius: 5px;
     transform: 0.5s;
+} */
+
+body{
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* Dark Mode---------------------------------------------------------------------------- */
+.dark-mode{
+    background-color: #000000;
+    color: var(--second);
+    transition: 0.5s;
+}
+
+.dark-mode .company-detail .background{
+    background-color: #16181C;
+}
+
+.dark-mode .button1{
+    background-color: #16181C;
+}
+
+.dark-mode .button1:hover{
+    color: var(--second);
+    background-color: var(--first);
+}
+
+.dark-mode footer{
+    border-top: 1px solid white;
 }

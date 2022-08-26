@@ -45,7 +45,7 @@
             </div>
     
             <div class="button-main">
-                <input type="button" class="button" value="Let's Talk">
+                <input type="button" onclick="darkMode()" class="button" value="Dark Mode">
             </div>
         </div>
 
@@ -58,6 +58,7 @@
     </div>
 
     <div class="body-content">
+
         <!-- service------------------------------------------------------------------ -->
         <div class="service" data-aos="fade-up">
             <div class="title">
@@ -132,10 +133,10 @@
                 <div class="title">
                     <p>About Us</p>
                 </div>
-                    <h1>Designed<br>For Living,<br>Build Your Life.</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s...</p>
-                    <div class="button-main">
-                    <input type="button" class="button" value="Learn More">
+                <h1>Designed<br>For Living,<br>Build Your Life.</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s...</p>
+                <div class="button">
+                    <input type="button" class="button1" value="Learn More">
                 </div>
             </div>
 
@@ -155,10 +156,12 @@
                 <div class="title">
                     <p>Spec</p>
                 </div>
+
                     <h1>Higher<br> Standard,<br>Low Impact.</h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s...</p>
-                    <div class="button-main">
-                    <input type="button" class="button" value="Learn More">
+                    <div class="button">
+                        <input type="button" class="button1" value="Learn More">
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,6 +175,7 @@
                 <!-- <p><span>រចនាប្លេក ខូអិល., ធីឌី</span></p> -->
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
             </div>
+
             <div class="image">
                 <img src="./images/me.jpg" alt="RXB Logo">
             </div>
@@ -180,6 +184,7 @@
 
    <!-- Company Contact ------------------------------------------------------------------ -->
    <div class="company-contact" data-aos="fade-up">
+
     <h1>Contact Us!</h1>
         <div class="option">
             <div class="address" data-aos="fade-right">
@@ -199,7 +204,7 @@
             <div class="email" data-aos="fade-left">
                 <h3>E-mail</h3>
                 <p>rachanasor@placedream.com</p>
-                <p>rachanasor01@placedream.com</p>
+                <p>info@placedream.com</p>
             </div>
         </div>
    </div>
@@ -238,5 +243,12 @@
 <script>
   AOS.init();
 </script>
+
+<script>
+    function darkMode() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
 
 </html>
