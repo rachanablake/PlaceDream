@@ -45,7 +45,7 @@
             </div>
     
             <div class="button-main">
-                <input type="button" onclick="darkMode()" class="button" value="Dark Mode">
+                <input type="button" onclick="darkMode()" class="button" id="btn" value="Dark Mode">
             </div>
         </div>
 
@@ -95,11 +95,13 @@
                         <h2>Property Insurance</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                     </div>
+
                     <div class="option">
                         <li><a href="#"><i class="fa-solid fa-money-bill-wave"></i></a></li>
                         <h2>Tax Advantage</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                     </div>
+
                     <div class="option">
                         <li><a href="#"><i class="fa-solid fa-chart-simple"></i></a></li>
                         <h2>Low Commission</h2>
@@ -115,10 +117,12 @@
                         <img src="./images/Intorior.jpg" alt="Intorior">
                         <h3>Outdoor Tarrace</h3>
                     </div>
+
                     <div class="img" data-aos="fade-in">
                         <img src="./images/main-bedroom.jpg" alt="Intorior">
                         <h3>Author's Landscaping</h3>
                     </div>
+
                     <div class="img" data-aos="fade-left">
                         <img src="./images/Chill.jpg" alt="Intorior">
                         <h3>Enclosed Area</h3>
@@ -133,6 +137,7 @@
                 <div class="title">
                     <p>About Us</p>
                 </div>
+
                 <h1>Designed<br>For Living,<br>Build Your Life.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s...</p>
                 <div class="button">
@@ -191,16 +196,19 @@
                 <h3>Address</h3>
                 <p>Toul SangKe, Ruessey Keo,<br>Phnom Penh, Cambodia</p>
             </div>
+
             <div class="telephone" data-aos="fade-right">
                 <h3>Telephone</h3>
                 <p>+855 17 258 574</p>
                 <p>+855 18 792 9389</p>
             </div>
+
             <div class="quick-link" data-aos="fade-left">
                 <h3>Quick Link</h3>
                 <p>Privacy Policy</p>
                 <p>Term Of Service</p>
             </div>
+
             <div class="email" data-aos="fade-left">
                 <h3>E-mail</h3>
                 <p>rachanasor@placedream.com</p>
@@ -218,9 +226,11 @@
         <h1><i class="fa-brands fa-slack"></i></h1>
         <h1>RXB</h1>
     </div>
-    <div class="go-top">
+
+    <!-- <div class="go-top">
         <p><a href="#top">Back on Top<i class="fa-solid fa-angle-up"></i></a></p>
-    </div>
+    </div> -->
+    
     <div class="copy-right">
         <p>© Copyright 2022 By <a href="https://www.facebook.com/rachanablake/" target="_blank"><h4>Rachana Sor</h4></a></p>
     </div>
@@ -237,18 +247,17 @@
         document.querySelector('#header-scrolled').classList.remove('navigation-blur');
     }
     }
+
+    function darkMode() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
-
-<script>
-    function darkMode() {
-      var element = document.body;
-      element.classList.toggle("dark-mode");
-    }
-  </script>
 
 </html>

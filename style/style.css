@@ -26,7 +26,6 @@
 body {
     overflow-x: hidden;
     transition: 0.5s;
-    background-color: #FFFFFF;
 }
 
 /* header------------------------------------------------------------------------------------- */
@@ -38,6 +37,7 @@ body {
 .header .navigation.navigation-blur{
     transition: 0.25s;
     background: var(--third);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
 }
@@ -439,14 +439,14 @@ footer .navigation .logo h1{
     color: var(--first);
 }
 
-footer .navigation .go-top p{
+/* footer .navigation .go-top p{
     font-size: large;
 }
 
 footer .navigation .go-top i{
     font-size: 20px;
     padding: 10px;
-}
+} */
 
 @media screen and (prefers-reduced-motion: no-preference) {
     html {
@@ -463,35 +463,27 @@ footer .navigation .copy-right h4{
 }
 
 /* scrollbar---------------------------------------------------------------------------------- */
-/* ::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-track{
     background: var(--second);
     background: transparent;
-} */
+    scrollbar-width: none;
+}
 
-/* ::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
     background: var(--first);
     border-radius: 5px;
-    scrollbar-width: none
+    
 }
 
 ::-webkit-scrollbar-thumb:hover{
     background: var(--third);
     border-radius: 5px;
     transform: 0.5s;
-} */
-
-body{
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll; 
-}
-
-body::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
 }
 
 /* Dark Mode---------------------------------------------------------------------------- */
