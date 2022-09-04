@@ -60,8 +60,8 @@
     <div class="body-content">
 
         <!-- service------------------------------------------------------------------ -->
-        <div class="service" data-aos="fade-up">
-            <div class="title">
+        <div class="service">
+            <div class="title" data-aos="fade-up">
                 <h1>Our Service</h1>
             </div>
     
@@ -174,47 +174,46 @@
 
     <!-- Company Detail ------------------------------------------------------------------ -->
     <div class="company-detail" data-aos="fade-up">
-        <div class="background">
+        <div class="background" id="canvas">
             <div class="article">
-                <h1>Rachana Blake Co., LTD</h1>
+                <h1>Rachana Blake</h1>
                 <!-- <p><span>រចនាប្លេក ខូអិល., ធីឌី</span></p> -->
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
             </div>
 
             <div class="image">
-                <img src="./images/me.jpg" alt="RXB Logo">
+                <img src="./images/RXB.jpg" alt="RXB Logo">
             </div>
         </div>
    </div>
 
    <!-- Company Contact ------------------------------------------------------------------ -->
    <div class="company-contact" data-aos="fade-up">
+        <h1>Contact Us!</h1>
+            <div class="option">
+                <div class="address" data-aos="fade-right">
+                    <h3>Address</h3>
+                    <p>Toul SangKe, Ruessey Keo,<br>Phnom Penh, Cambodia</p>
+                </div>
 
-    <h1>Contact Us!</h1>
-        <div class="option">
-            <div class="address" data-aos="fade-right">
-                <h3>Address</h3>
-                <p>Toul SangKe, Ruessey Keo,<br>Phnom Penh, Cambodia</p>
-            </div>
+                <div class="telephone" data-aos="fade-right">
+                    <h3>Telephone</h3>
+                    <p>+855 17 258 574</p>
+                    <p>+855 18 792 9389</p>
+                </div>
 
-            <div class="telephone" data-aos="fade-right">
-                <h3>Telephone</h3>
-                <p>+855 17 258 574</p>
-                <p>+855 18 792 9389</p>
-            </div>
+                <div class="quick-link" data-aos="fade-left">
+                    <h3>Quick Link</h3>
+                    <p>Privacy Policy</p>
+                    <p>Term Of Service</p>
+                </div>
 
-            <div class="quick-link" data-aos="fade-left">
-                <h3>Quick Link</h3>
-                <p>Privacy Policy</p>
-                <p>Term Of Service</p>
+                <div class="email" data-aos="fade-left">
+                    <h3>E-mail</h3>
+                    <p>rachanasor@placedream.com</p>
+                    <p>info@placedream.com</p>
+                </div>
             </div>
-
-            <div class="email" data-aos="fade-left">
-                <h3>E-mail</h3>
-                <p>rachanasor@placedream.com</p>
-                <p>info@placedream.com</p>
-            </div>
-        </div>
    </div>
 </body>
 
@@ -252,12 +251,15 @@
       var element = document.body;
       element.classList.toggle("dark-mode");
     }
-
 </script>
+
+<script src="./style/particles.js"></script>
+<script src="./style/app.js"></script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+
 
 </html>

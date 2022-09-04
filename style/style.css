@@ -7,6 +7,11 @@
 
 :root{
     
+    /* --first: #277BC0;
+    --second: #FFF4CF;
+    --third: #FFB200;
+    --fourth: #FFCB42; */
+
     --first: #1D9BF0;
     --second: #F0F2F5;
     --third: #1D9BF0;
@@ -37,9 +42,9 @@ body {
 .header .navigation.navigation-blur{
     transition: 0.25s;
     background: var(--third);
+    /* -webkit-backdrop-filter: saturate(180%) blur(30px); */
+    /* backdrop-filter: saturate(100%) blur(30px); */
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .header{
@@ -47,7 +52,8 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./Content-Cover-01.png');
+    background-image: url('./Cover.jpg');
+    transition: 0.5s;
 }
 
 /* Navigation --------------------------------------------- */
@@ -93,6 +99,7 @@ body {
     color: var(--second);
     text-decoration: none;
     font-weight: bold;
+    transition: 0.5s;
 }
 
 .header .navigation .navigat .nav li a::after{
@@ -128,23 +135,36 @@ body {
 }
 
 /* Header Tittle------------------------------------------------------------------------------ */
+.header .content-header{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; */
+
+    /* object-position: 50% 50%; */
+}
 .header .content-header .title{
     text-align: center;
     padding: 20%;
     color: var(--second);
-}
+    transition: 0.5s;
 
-.header .content-header .title p{
-    font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 100px;
-}
-
-.header .content-header .title{
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 3s; /* Firefox < 16 */
     -ms-animation: fadein 3s; /* Internet Explorer */
     -o-animation: fadein 3s; /* Opera < 12.1 */
     animation: fadein 3s;
+}
+
+.header .content-header .title p{
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 100px;
 }
 
 @keyframes fadein {
@@ -186,7 +206,6 @@ body {
 }
 
 /* Body--------------------------------------------------------------------------------------- */
-
 /* Service --------------------------------------------------------------------------------------- */
 .body-content .catalog{
     display: flex;
@@ -349,7 +368,6 @@ body {
 .company-detail{
     width: 70%;
     margin: auto;
-    transition: 0.25s;
     padding: 50px 0;
 }
 
@@ -357,6 +375,7 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--first);
+    background-size: cover;
 }
 
 .company-detail .article{
@@ -407,6 +426,7 @@ body {
 .company-contact h1{
     padding: 0 0 15px 0;
 }
+
 .company-contact h3{
     padding: 10px 0;
     color: var(--first);
@@ -416,6 +436,7 @@ body {
 footer{
     border-top: 1px solid #05142D;
 }
+
 footer .navigation{
     margin: auto;
     width: 95%;
@@ -464,7 +485,7 @@ footer .navigation .copy-right h4{
 
 /* scrollbar---------------------------------------------------------------------------------- */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
     background: transparent;
 }
 
@@ -477,19 +498,33 @@ footer .navigation .copy-right h4{
 ::-webkit-scrollbar-thumb{
     background: var(--first);
     border-radius: 5px;
-    
 }
 
 ::-webkit-scrollbar-thumb:hover{
     background: var(--third);
     border-radius: 5px;
-    transform: 0.5s;
 }
 
 /* Dark Mode---------------------------------------------------------------------------- */
 .dark-mode{
     background-color: #000000;
     color: var(--second);
+    transition: 0.5s;
+}
+
+.dark-mode .header{
+    background-image: url('./Cover-Night-Mode.jpg');
+    transition: 0.5s;
+}
+
+.dark-mode .header .content-header .title{
+    /* color: var(--second); */
+    color: #000000;
+    transition: 0.5s;
+}
+
+.dark-mode .header .navigation .navigat .nav li a{
+    color: #000000;
     transition: 0.5s;
 }
 
