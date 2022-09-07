@@ -238,12 +238,21 @@
 
 <!-- script ------------------------------------------------------------------ -->
 <script>
+    // window.onscroll = function (e) {
+    // if (window.pageYOffset > 150) {
+    //     document.querySelector('#header-scrolled').classList.add('navigation-blur');
+    // }
+    // else {
+    //     document.querySelector('#header-scrolled').classList.remove('navigation-blur');
+    // }
+    // }
+
     window.onscroll = function (e) {
     if (window.pageYOffset > 150) {
-        document.querySelector('#header-scrolled').classList.add('navigation-blur');
+        document.querySelector('#header-scrolled').classList.remove('navigation-blur');
     }
     else {
-        document.querySelector('#header-scrolled').classList.remove('navigation-blur');
+        document.querySelector('#header-scrolled').classList.add('navigation-blur');
     }
     }
 

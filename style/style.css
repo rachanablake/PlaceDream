@@ -12,10 +12,15 @@
     --third: #FFB200;
     --fourth: #FFCB42; */
 
-    --first: #1D9BF0;
+    /* --first: #1D9BF0;
     --second: #F0F2F5;
     --third: #1D9BF0;
-    --fourth: #181818;
+    --fourth: #181818; */
+
+    --first: #185ADB;
+    --second: #EFEFEF;
+    --third: #FFC947;
+    --fourth: #0A1931;
 
     /* --first: #1D9BF0;
     --second: #EFF3F4;
@@ -39,11 +44,11 @@ body {
     margin: 0 auto;
 }
 
-.header .navigation.navigation-blur{
+.header .navigation .navigation-blur{
     transition: 0.25s;
-    background: var(--third);
-    /* -webkit-backdrop-filter: saturate(180%) blur(30px); */
-    /* backdrop-filter: saturate(100%) blur(30px); */
+    background: var(--first);
+    -webkit-backdrop-filter: saturate(180%) blur(30px);
+    backdrop-filter: saturate(100%) blur(30px);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
 }
 
@@ -59,9 +64,12 @@ body {
 /* Navigation --------------------------------------------- */
 .header .navigation{
     width: 100%;
+    height: 13%;
     padding: 20px;
-    transition: 0.25s;
+    /* transition: 0.25s; */
     box-sizing: border-box;
+
+    background-color: var(--first);
 
     position: fixed;
     top: 0;
@@ -72,7 +80,6 @@ body {
     justify-content: space-between;
 }
 
-/* Navigate Logo----------------------------------------- */
 .header .navigation .logo{
     /* width: 5%; */
     
@@ -81,10 +88,10 @@ body {
     cursor: pointer;
 }
 
-/* Navigate menu----------------------------------------- */
 .header .navigation .navigat{
     margin: auto;
     list-style: none;
+
 }
 
 .header .navigation .navigat .nav{
@@ -123,7 +130,7 @@ body {
     cursor: pointer;
     font-size: 15px;
     font-weight: Bold;
-    color: var(--third);
+    color: var(--first);
     transition: 0.25s;
     
 }
@@ -132,6 +139,10 @@ body {
     color: var(--second);
     background-color: var(--fourth);
     transition: 0.25s;
+}
+
+.nav-hidden{
+    transform: translate(calc(-1*var(--nav-height)));
 }
 
 /* Header Tittle------------------------------------------------------------------------------ */
@@ -149,10 +160,18 @@ body {
 
     /* object-position: 50% 50%; */
 }
+
+.header .content-header{
+    /* line-height: 100vh; */
+}
+
 .header .content-header .title{
     text-align: center;
+    height: 900px;
     padding: 20%;
     color: var(--second);
+    /* vertical-align: middle; */
+    /* display: table-cell; */
     transition: 0.5s;
 
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -369,13 +388,17 @@ body {
     width: 70%;
     margin: auto;
     padding: 50px 0;
+
 }
 
 .company-detail .background{
     display: flex;
     align-items: center;
     background-color: var(--first);
-    background-size: cover;
+
+    /* background-size: cover; */
+    /* background-size: contain; */
+    /* background-position-y: center; */
 }
 
 .company-detail .article{
@@ -393,10 +416,15 @@ body {
     
 .company-detail .image{
     width: 50%;
+    
 }
 
 .company-detail .image img{
     width: 100%;
+
+    background-size: contain;
+    background-size: cover;
+    background-size: 100%;
 }
 
 /* Company Contact-------------------------------------------------------------------- */
@@ -507,7 +535,7 @@ footer .navigation .copy-right h4{
 
 /* Dark Mode---------------------------------------------------------------------------- */
 .dark-mode{
-    background-color: #000000;
+    background-color: var(--fourth);
     color: var(--second);
     transition: 0.5s;
 }
@@ -519,21 +547,26 @@ footer .navigation .copy-right h4{
 
 .dark-mode .header .content-header .title{
     /* color: var(--second); */
-    color: #000000;
+    color: var(--fourth);
     transition: 0.5s;
 }
 
 .dark-mode .header .navigation .navigat .nav li a{
-    color: #000000;
+    color: var(--first);
     transition: 0.5s;
 }
 
+.dark-mode .header .navigation.navigation-blur{
+    /* background: var(--fourth); */
+    background: #122f5c;
+}
+
 .dark-mode .company-detail .background{
-    background-color: #16181C;
+    background-color: #122f5c;
 }
 
 .dark-mode .button1{
-    background-color: #16181C;
+    background-color: #122f5c;
 }
 
 .dark-mode .button1:hover{
@@ -543,4 +576,11 @@ footer .navigation .copy-right h4{
 
 .dark-mode footer{
     border-top: 1px solid white;
+}
+
+/* responesive------------------------------------------------------------- */
+@media only screen and (max-width: 600px){
+    *{
+        display: none;
+    }
 }
