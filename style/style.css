@@ -1,36 +1,15 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
 :root{
-    
-    /* --first: #277BC0;
-    --second: #FFF4CF;
-    --third: #FFB200;
-    --fourth: #FFCB42; */
-
-    /* --first: #1D9BF0;
-    --second: #F0F2F5;
-    --third: #1D9BF0;
-    --fourth: #181818; */
-
     --first: #185ADB;
     --second: #EFEFEF;
     --third: #FFC947;
     --fourth: #0A1931;
-
-    /* --first: #1D9BF0;
-    --second: #EFF3F4;
-    --third: #0F4C75;
-    --fourth: #D98326; */
-
-    /* --first: #1F5BD3;
-    --second: #EFEFEF;
-    --third: #05142D;
-    --fourth: #447DD8; */
 }
 
 body {
@@ -44,13 +23,13 @@ body {
     margin: 0 auto;
 }
 
-.header .navigation .navigation-blur{
+/* .header .navigation .navigation-blur{
     transition: 0.25s;
     background: var(--first);
     -webkit-backdrop-filter: saturate(180%) blur(30px);
     backdrop-filter: saturate(100%) blur(30px);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-}
+} */
 
 .header{
     width: 100%;
@@ -64,12 +43,12 @@ body {
 /* Navigation --------------------------------------------- */
 .header .navigation{
     width: 100%;
-    height: 13%;
+    height: 100px;
     padding: 20px;
-    /* transition: 0.25s; */
     box-sizing: border-box;
 
     background-color: var(--first);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
 
     position: fixed;
     top: 0;
@@ -78,6 +57,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    transition: top 0.3s;
 }
 
 .header .navigation .logo{
@@ -116,14 +97,13 @@ body {
     transition: 0.5s;
     margin: auto;
     display: block;
-    background-color: var(--fourth);
+    background-color: var(--third);
 }
 
 .header .navigation .navigat .nav li a:hover::after{
     width: 100%;
 }
 
-/* Navigate Button----------------------------------------- */
 .header .button-main .button{
     border: none;
     padding: 15px;
@@ -146,29 +126,15 @@ body {
 }
 
 /* Header Tittle------------------------------------------------------------------------------ */
-.header .content-header{
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    display: block;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; */
-
-    /* object-position: 50% 50%; */
-}
-
-.header .content-header{
-    /* line-height: 100vh; */
-}
-
 .header .content-header .title{
     text-align: center;
     height: 900px;
-    padding: 20%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     color: var(--second);
     /* vertical-align: middle; */
     /* display: table-cell; */
@@ -224,7 +190,6 @@ body {
     color: var(--first);
 }
 
-/* Body--------------------------------------------------------------------------------------- */
 /* Service --------------------------------------------------------------------------------------- */
 .body-content .catalog{
     display: flex;
@@ -329,14 +294,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 0;
+    /* padding: 50px 0; */
+    margin: 50px 0;
 }
 
 .spec{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 0;
+    /* padding: 50px 0; */
+    margin: 50px 0;
 }
 
 .article{
@@ -388,43 +355,44 @@ body {
     width: 70%;
     margin: auto;
     padding: 50px 0;
-
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .company-detail .background{
+    width: 100%;
     display: flex;
-    align-items: center;
-    background-color: var(--first);
 
-    /* background-size: cover; */
-    /* background-size: contain; */
-    /* background-position-y: center; */
+    background-color: var(--first);
 }
 
-.company-detail .article{
+.company-detail .background .article{
     width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     text-align: left;
     padding: 0 30px;
     color: var(--second);
 }
 
 .company-detail .article h1{
-    /* font-family: 'Kantumruy Pro', sans-serif; */
     font-size: 40px;
     padding: 10px 0;
 }
     
-.company-detail .image{
+.company-detail .background .image{
     width: 50%;
-    
 }
 
-.company-detail .image img{
+.company-detail .background .image img{
     width: 100%;
+    height: 100%;
 
-    background-size: contain;
     background-size: cover;
-    background-size: 100%;
+    background-position: center;
 }
 
 /* Company Contact-------------------------------------------------------------------- */
@@ -488,14 +456,14 @@ footer .navigation .logo h1{
     color: var(--first);
 }
 
-/* footer .navigation .go-top p{
+footer .navigation .go-top p{
     font-size: large;
 }
 
 footer .navigation .go-top i{
     font-size: 20px;
     padding: 10px;
-} */
+}
 
 @media screen and (prefers-reduced-motion: no-preference) {
     html {
@@ -513,14 +481,13 @@ footer .navigation .copy-right h4{
 
 /* scrollbar---------------------------------------------------------------------------------- */
 ::-webkit-scrollbar {
-    width: 7px;
-    background: transparent;
+    width: 0px;
+    -ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar-track{
+    width: 7px;
     background: var(--second);
-    background: transparent;
-    scrollbar-width: none;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -546,18 +513,21 @@ footer .navigation .copy-right h4{
 }
 
 .dark-mode .header .content-header .title{
-    /* color: var(--second); */
+    color: var(--fourth);
+    transition: 0.5s;
+}
+
+.dark-mode .header .content-header .title h1{
     color: var(--fourth);
     transition: 0.5s;
 }
 
 .dark-mode .header .navigation .navigat .nav li a{
-    color: var(--first);
+    color: var(--second);
     transition: 0.5s;
 }
 
 .dark-mode .header .navigation.navigation-blur{
-    /* background: var(--fourth); */
     background: #122f5c;
 }
 
