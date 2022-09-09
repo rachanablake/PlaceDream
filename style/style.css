@@ -191,12 +191,14 @@ body {
   transition: 0.25s;
 }
 .body-content .about {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 50px 0;
 }
 .body-content .spec {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -213,6 +215,7 @@ body {
   color: var(--first);
 }
 .body-content .article p {
+  width: 90%;
   font-size: 16px;
   padding: 0 0 5px 0;
 }
@@ -373,6 +376,104 @@ footer .navigation .copy-right h4 {
   border-top: 1px solid white;
 }
 
+@media screen and (max-width: 500px) {
+  body .header {
+    width: 100%;
+    margin: auto;
+  }
+  body .header .navigation {
+    display: flex;
+  }
+  body .header .navigation .logo {
+    display: none;
+  }
+  body .header .navigation .button-main {
+    display: none;
+  }
+  body .header .content-header .title p {
+    font-size: 50px;
+  }
+  body .header .content-header .title h1 {
+    font-size: 50px;
+  }
+  body .body-content {
+    overflow-x: hidden;
+  }
+  body .body-content .service .catalog {
+    display: block;
+  }
+  body .body-content .service .catalog .img {
+    width: 80%;
+  }
+  body .body-content .feature-content .feature-icon .icon-list {
+    display: block;
+  }
+  body .body-content .feature-content .feature-list .feature-image {
+    display: block;
+  }
+  body .body-content .feature-content .feature-list .feature-image .img {
+    width: 80%;
+  }
+  body .body-content .about {
+    display: block;
+  }
+  body .body-content .spec {
+    display: block;
+  }
+  body .body-content .article {
+    width: 100%;
+  }
+  body .body-content .article .title {
+    font-size: 30px;
+  }
+  body .body-content .article h1 {
+    font-size: 50px;
+  }
+  body .body-content .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  body .body-content .image img {
+    margin: 50px 0;
+  }
+  body .company-detail .background {
+    width: 100%;
+    display: block;
+  }
+  body .company-detail .background .article {
+    width: 100%;
+  }
+  body .company-detail .background .article h1 {
+    text-align: center;
+  }
+  body .company-detail .background .article p {
+    text-align: center;
+    margin: 15px 0;
+  }
+  body .company-detail .background .image {
+    width: 100%;
+  }
+  body .company-contact {
+    overflow-x: hidden;
+  }
+  body .company-contact .option {
+    display: block;
+    align-items: center;
+  }
+  body footer .navigation {
+    display: block;
+  }
+  body footer .navigation .logo {
+    margin: 15px 0px;
+  }
+  body footer .navigation .go-top {
+    display: none;
+  }
+  body footer .navigation .copy-right {
+    font-size: 15px;
+  }
+}
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

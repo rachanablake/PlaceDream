@@ -250,6 +250,7 @@ body {
 
     // About--------------------------------------------------------------------------------------
     .about{
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -258,6 +259,7 @@ body {
 
     // Spec--------------------------------------------------------------------------------------
     .spec{
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -277,6 +279,7 @@ body {
     }
     
     .article p{
+        width: 90%;
         font-size: 16px;
         padding: 0 0 5px 0;
     }
@@ -491,6 +494,141 @@ footer{
     }
 }
 
+// responsive-----------------------------------------------------------------------------------
+@media screen and (max-width: 500px) {
+
+    body{
+        .header{
+            width: 100%;
+            margin: auto;
+
+            .navigation{
+                display: flex;
+    
+                .logo{
+                    display: none;
+                }
+    
+                .button-main{
+                    display: none;
+                }
+            }
+    
+            .content-header{
+                .title{
+                    p{
+                        font-size: 50px;
+                    }
+    
+                    h1{
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    
+        .body-content{
+            overflow-x: hidden;
+            .service{
+                .catalog{
+                    display: block;
+                    .img{
+                        width: 80%;
+                    }
+                }
+            }
+    
+            .feature-content{
+                .feature-icon{
+                    .icon-list{
+                        display: block;
+                    }
+                }
+    
+                .feature-list{
+                    .feature-image{
+                        display: block;
+                        .img{
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+    
+            .about{
+                display: block;
+            }
+            .spec{
+                display: block;
+            }
+            .article{
+                width: 100%;
+                .title{
+                    font-size: 30px;
+                }
+                h1{
+                    font-size: 50px;
+                }
+            }
+    
+            .image{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                img{
+                    margin: 50px 0;
+
+                }
+            }
+    
+        }
+    
+        .company-detail{
+            .background{
+                width: 100%;
+                display: block;
+    
+                .article{
+                    width: 100%;
+                    h1{
+                        text-align: center;
+                    }
+                    p{
+                        text-align: center;
+                        margin: 15px 0;
+                    }
+                }
+                .image{
+                    width: 100%;
+                }
+            }
+        }
+    
+        .company-contact{
+            .option{
+                display: block;
+                align-items: center;
+            }
+            overflow-x: hidden;
+        }
+    
+        footer{
+            .navigation{
+                display: block;
+    
+                .logo{
+                    margin: 15px 0px;
+                }
+                .go-top{
+                    display: none;
+                }
+                .copy-right{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
 
 // Other Link-----------------------------------------------------------------------------------
 @media screen and (prefers-reduced-motion: no-preference) {
