@@ -21,6 +21,7 @@ body .header {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-image: url("./Cover.jpg");
   transition: 0.5s;
 }
@@ -73,8 +74,9 @@ body .header .navigation .navigat .nav li a:hover::after {
   width: 100%;
 }
 body .header .button-main .button {
+  width: 120px;
+  height: 50px;
   border: none;
-  padding: 15px;
   cursor: pointer;
   font-size: 15px;
   font-weight: Bold;
@@ -88,7 +90,7 @@ body .header .button-main .button:hover {
 }
 body .header .content-header .title {
   text-align: center;
-  height: 900px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,6 +110,9 @@ body .header .content-header .title h1 {
 }
 body .header .content-header .title i {
   color: var(--first);
+}
+body .body-content {
+  overflow-x: hidden;
 }
 body .body-content .service .title h1 {
   font-size: 100px;
@@ -347,7 +352,7 @@ footer .navigation .copy-right h4 {
   color: var(--fourth);
   transition: 0.5s;
 }
-.dark-mode .header .content-header h1 {
+.dark-mode .header .content-header .title h1 {
   color: var(--fourth);
   transition: 0.5s;
 }
@@ -427,7 +432,9 @@ footer .navigation .copy-right h4 {
   }
   body .body-content .image {
     width: 100%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   body .body-content .image img {
     margin: 50px 0;
@@ -453,12 +460,16 @@ footer .navigation .copy-right h4 {
     width: 100%;
     background-size: cover;
   }
+  body .company-contact {
+    overflow-x: hidden;
+  }
   body .company-contact .option {
     display: block;
-    align-items: center;
+    text-align: center;
   }
   footer .navigation {
     display: block;
+    overflow-x: hidden;
   }
   footer .navigation .logo {
     margin: 15px 0px;
@@ -468,14 +479,6 @@ footer .navigation .copy-right h4 {
   }
   footer .navigation .copy-right {
     font-size: 15px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  body .body-content {
-    display: block;
-  }
-  footer .navigation {
-    display: block;
   }
 }
 ::-webkit-scrollbar {

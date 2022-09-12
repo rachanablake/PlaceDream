@@ -25,4 +25,14 @@ function darkMode() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", ()=>{
+
+    if(btn.value === "Dark Mode"){
+        btn.value = "Ligt Mode";
+    }else{
+        btn.value= "Dark Mode";
+    }
+})
 
